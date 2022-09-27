@@ -4,38 +4,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora</title>
+    <title>Simulador</title>
 </head>
 <body>
     <div>
-    Número de funcionários da empresa: <input id="input_funcionarios"><br>
-    Salário médio dos funcionários: <input id="input_salario"><br>
-    Carga horária por dia: <input id="input_horaspordia"><br>
-    Média de horas em pausas inesperadas por dia: <input id="input_pausas"><br>
-    <button onclick="calcular()">Calcular prejuízo por improdutividade</button>
+    Número de funcionários da empresa: <input id="input_funcionarios">
+    Salário médio dos funcionários: <input id="input_salario">
+    Porcentagem de absenteísmo:<input id="input_absenteismo">
+    <button onclick="calcular()">Calcular custo com absenteísmo</button>
     <span id="span_resultado"></span>
     </div>
 </body>
 <script>
     function calcular(){
         // nessa parte temos somente a declaração das variáveis com os inputs
-        var numeroDeFuncionarios = Number(input_funcionarios.value);
+        var Funcionarios = Number(input_funcionarios.value);
         var salarioMedio = Number(input_salario.value);
-        var horasPorDia = Number(input_horaspordia.value);
-        var horasPausa = Number(input_pausas.value);
+        var absenteismo = Number(input_absenteismo.value);
+        
         // daqui para baixo temos as contas
-        var horasMensais = (horasPorDia * numeroDeFuncionarios) * 21; // multiplicando horas por funcionários e depois por 21 para saber o total de horas trabalhadas no mês de todos os funcionários juntos
-        var horasPausaMes = (horasPausa * numeroDeFuncionarios) * 21; // multiplicando horas por funcionários e depois por 21 para saber o total de horas em pausas no mês de todos os funcionários juntos
-        var porcentagem = horasPausaMes / horasMensais; // dividindo para saber a porcentagem entre pausas e horas de trabalho
-        var porcentagem_tela = porcentagem * 100; //esta variável é para exibir a porcentagem na tela
+        var resultado = (Funcionarios * salarioMedio) * (absenteismo / 100);
 
-        var resultado = (numeroDeFuncionarios * salarioMedio) * porcentagem; //multiplicando o total pago para os funcionários pela porcentagem para saber o prejuízo que foi pego por horas improdutivas no mês
-
-        // a variavel porcentagem é: 
-        // A porcentagem de improdutividade no mês(Pausas indevidas no mês)
-
-        span_resultado.innerHTML = `<br> Você tem um prejuízo mensal médio de <b>${resultado.toLocaleString("pt-BR", {style: "currency", currency: "BRL", maximumFractionDigits: 2})}</b> oque representa <b>${porcentagem_tela}%</b> do total pago aos seus funcionários.<br>
-        Mas não se preocupe, nós podemos ajudar a aumentar a produtividade dos seus funcionários!`
+        span_resultado.innerHTML = `<br> Você tem um custo mensal com absenteísmo de <b>${resultado.toLocaleString("pt-BR", {style: "currency", currency: "BRL", maximumFractionDigits: 2})}`
     };
 </script>
 
