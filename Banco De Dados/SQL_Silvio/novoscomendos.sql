@@ -46,6 +46,6 @@ select * from funcionario;
 select * from sensor;
 select * from empresa;
 select * from  dados_lumi;
-alter table sensor add column fkdados int,
+alter table sensor add column fkdados int;
 select * from empresa join funcionario on id_empresa = fkempresa;
 select * from funcionario join sensor on id_sensor = fksensor;
