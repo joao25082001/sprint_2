@@ -22,7 +22,6 @@ CREATE TABLE endereco(
     fkEmpresa INT, FOREIGN KEY (fkEmpresa) REFERENCES Empresa(idEmpresa)
 );
 
-
 CREATE TABLE funcionario(
 	idFuncionario INT auto_increment,
 	cpf VARCHAR (11),
@@ -34,7 +33,7 @@ CREATE TABLE funcionario(
 	FOREIGN KEY (fkEmpresa) REFERENCES empresa(idEmpresa),
 	PRIMARY KEY (idFuncionario, fkEmpresa)
 ); 
--- Tabela Local
+
 CREATE TABLE ambiente(
 	idAmbiente INT PRIMARY KEY auto_increment, 
 	metros_quadrados INT,
@@ -43,7 +42,6 @@ CREATE TABLE ambiente(
 	FOREIGN KEY (fkFuncionario) REFERENCES funcionario (idFuncionario)
 );
 
--- Tabela sensor
 CREATE TABLE sensor(
 	idSensor INT PRIMARY KEY auto_increment,
 	nome_sensor VARCHAR (45),
