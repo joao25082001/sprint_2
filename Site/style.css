@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    border: none;
+}
+
+body{
+    font-family: 'Roboto' , sans-serif;
+}
+
+/*Daqui para baixo é a estlização do sobrenos*/
+
+.container_sobrenos{
+    width: 90%;
+    display: flex;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #8181D7;
+    height: 600px;
+    border-radius: 50px;
+}
+
+.sobrenos{
+    margin: 10px 0; /* esta margem é para espaçar o elemento que será inserido logo acima */
+}
+
+.sobrenos .caixas_sobrenos{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #000235;
+    width: 90%;
+    height: 510px;
+    left: 92px;
+    top: 2092px;
+    border-radius: 50px;
+}
+
+.caixa_sobrenos{
+    margin: 10px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.caixa_sobrenos h3{
+    margin: 15px 0;
+    color: #FFFF;
+}
+
+.caixa_sobrenos p{
+    text-align: center;
+    color: #FFFF;
+}
+
+.caixa_sobrenos img {
+    width: 170px;
+}
