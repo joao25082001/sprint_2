@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style_footer.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title>baixo</title>
+</head>
+
+<body>
+    <footer>
+        <div class="container_footer">
+            <!-- onde ira ficar os dois quadrado -->
+            <div class="container_central">
+                <!-- quadrado em cima -->
+                <div class="contatos">
+                    <!-- area onde vai ficar o texto contato -->
+                    <div class="contatos_inputs">
+                        <h1 class="titulo_footer">Contato</h1>
+                        <!-- aqui onde ficarao as inputs e o comentario -->
+                        <div class="textos">
+                            <p>Entre em contato e saiba como os nossos especialistas podem ajudar o seu negócio!
+                                Responderemos em até 24 horas!</p>
+                            <div class="campo">
+                                <label for="empresa"> empresa</label>
+                                <input style="opacity: 0.7;" type="empresa" name="empresa" id="empresa">
+                            </div>
+                            <div class="campo">
+                                <label for="email"> email</label>
+                                <input type="email" name="email" id="email_validar">
+                                <span id="texto_email"></span>
+                            </div>
+                            <div class="campo3">
+                                <label for="Assunto"> Assunto</label>
+                                <input class="input3" type="Assunto" name="Assunto" id="Assunto" placeholder="">
+                            </div>
+                            <button onclick="validar()">Enviar</button>
+                        </div>
+                    </div>
+                    <div class="contatos_email">
+                        <P>Caso preferir, entre <br> em contato conosco <br> por meio destes <br> canais: </P>
+                        <span class="span_contato">
+                            Sede:<br>+55 (11) 9550-0000
+                        </span>
+                        <span class="span_contato">
+                            Email: <br>luminar@gmail.com
+                        </span>
+                    </div>
+                </div>
+                <!-- quadrado baixo -->
+                <div class="nota">
+                    <div class="nota_texto">
+                        <h3> Avalie nosso serviço</h3>
+                        <p>
+                            De uma escada de 0 a 5 o quanto você recomendaria o serviço da Luminar para uma empresa?
+                        </p>
+                    </div>
+                    <div class="nota_estrela">
+                        <div class="imagens_footer">
+                            <img class=estrela1 id="estrela1a" onclick="estrela1()" src="../estrela (1) 7.png" alt="">
+                            <img class=estrela2 id="estrela2a" onclick="estrela2()" src="../estrela (1) 7.png" alt="">
+                            <img class=estrela3 id="estrela3a" onclick="estrela3()" src="../estrela (1) 7.png" alt="">
+                            <img class=estrela2 id="estrela4a" onclick="estrela4()" src="../estrela (1) 7.png" alt="">
+                            <img class=estrela1 id="estrela5a" onclick="estrela5()" src="../estrela (1) 7.png" alt="">
+                        </div>
+                        <div class="notas_site">
+                            <H1>NOTA: <span id="mudar_verde">0.0</span> </H1>
+                        </div>
+                        <!-- <img src="../ant-design_star-filled.png" alt=""> -->
+                    </div>
+                    <div class="simbolo">
+                        Todos os direitos reservados&copy; para Luminar
+                    </div>
+                </div> <br>
+            </div> <br>
+        </div>
+
+    </footer>
+</body>
+
+</html>
+<script>
+    function validar() {
+        var email_valida = email_validar.value
+        email_valida.replace(" ","")
+        
+        if (email_valida.length < 10) {
+            texto_email.innerHTML = 'poucos digitos'
+            texto_email.style.color = 'red'
+        }
+        else if (email_valida.indexOf("@") < 0) {
+            texto_email.innerHTML = 'email invalido'
+            texto_email.style.color = 'red'
+        } 
+        else if (email_valida.endsWith('@sptech.school')== false 
+        && email_valida.endsWith('@gmail.com') == false && email_valida.endsWith('@hotmail.com')== false && email_valida.endsWith('@outlook.com') == false&& email_valida.endsWith('@bandtec.com.br')== false && email_valida.endsWith('@microsoft.com') == false)
+         {
+            texto_email.innerHTML = ' insira um email valido'
+            texto_email.style.color = 'red'
+        }
+        else{
+            texto_email.innerHTML = 'ok'
+            texto_email.style.color = 'green'
+        }
+
+    }
+    function estrela1() {
+        estrela1a.src = "../ant-design_star-filled.png";
+        estrela2a.src = "../estrela (1) 7.png";
+        estrela3a.src = "../estrela (1) 7.png";
+        estrela4a.src = "../estrela (1) 7.png";
+        estrela5a.src = "../estrela (1) 7.png";
+        mudar_verde.innerHTML = "1.0"
+        mudar_verde.style.color = "red"
+    }
+    function estrela2() {
+        estrela1a.src = "../ant-design_star-filled.png";
+        estrela2a.src = "../ant-design_star-filled.png";
+        estrela3a.src = "../estrela (1) 7.png";
+        estrela4a.src = "../estrela (1) 7.png";
+        estrela5a.src = "../estrela (1) 7.png";
+        mudar_verde.innerHTML = "2.0"
+        mudar_verde.style.color = "red"
+    }
+    function estrela3() {
+        estrela1a.src = "../ant-design_star-filled.png";
+        estrela2a.src = "../ant-design_star-filled.png";
+        estrela3a.src = "../ant-design_star-filled.png";
+        estrela4a.src = "../estrela (1) 7.png";
+        estrela5a.src = "../estrela (1) 7.png";
+        mudar_verde.innerHTML = "3.0"
+        mudar_verde.style.color = "yellow"
+    }
+    function estrela4() {
+        estrela1a.src = "../ant-design_star-filled.png";
+        estrela2a.src = "../ant-design_star-filled.png";
+        estrela3a.src = "../ant-design_star-filled.png";
+        estrela4a.src = "../ant-design_star-filled.png";
+        estrela5a.src = "../estrela (1) 7.png";
+
+        mudar_verde.style.color = "aqua"
+        mudar_verde.innerHTML = "4.0"
+    }
+    function estrela5() {
+        estrela1a.src = "../ant-design_star-filled.png";
+        estrela2a.src = "../ant-design_star-filled.png";
+        estrela3a.src = "../ant-design_star-filled.png";
+        estrela4a.src = "../ant-design_star-filled.png";
+        estrela5a.src = "../ant-design_star-filled.png";
+        mudar_verde.innerHTML = "5.0"
+        mudar_verde.style.color = "green"
+    }
+
+</script>
