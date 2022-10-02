@@ -96,3 +96,16 @@ INSERT INTO registro VALUES
 (null, 30.0, '2022-10-02 12:30:00', 2),
 (null, 20.0, '2022-10-02 13:00:00', 3);
 -- ajustar o tamanho do decimal do valorLuminosidade
+show tables;
+select * from  funcionario join empresa on fkempresa = idempresa;
+select * from  funcionario join empresa on fkempresa = idempresa join ambiente on fkfuncionario = idfuncionario;
+select * from  funcionario 
+join empresa on fkempresa = idempresa
+ join ambiente on 
+fkfuncionario= idfuncionario 
+join sensor on idambiente = fkambiente;
+select * from  funcionario 
+join empresa on fkempresa = idempresa
+ join ambiente on 
+fkfuncionario= idfuncionario 
+join sensor on idambiente = fkambiente join registro on idregistro = fksensor;
