@@ -95,6 +95,49 @@ INSERT INTO registro VALUES
 (null, 10.0, '2022-10-02 12:00:00', 1),
 (null, 30.0, '2022-10-02 12:30:00', 2),
 (null, 20.0, '2022-10-02 13:00:00', 3);
+
+-- selects das tabelas
+select * from empresa;
+select * from endereco;
+select * from funcionario;
+select * from ambiente;
+select * from sensor;
+select * from registro;
+
+-- select dos campos + importantes
+-- empresa
+select nome from empresa;
+select cnpj from empresa;
+select responsavel from empresa;
+select telefone from empresa;
+select email from empresa;
+select senha from empresa;
+
+-- endereco
+select logradouro from endereco;
+select cep from endereco;
+select complemento from endereco;
+select cidade from endereco;
+select estado from endereco;
+
+-- funcionario
+select cpf from funcionario;
+select nome from funcionario;
+select usuario from funcionario;
+select senha from funcionario;
+select setor from funcionario;
+
+-- ambiente
+select metros_quadrados  from ambiente;
+select qtd_sensor from ambiente;
+
+-- sensor
+select nome_sensor from sensor;
+
+-- registro 
+select valor_luminosidade from registro;
+select data_hora from registro;
+
 -- ajustar o tamanho do decimal do valorLuminosidade
 show tables;
 select * from  funcionario join empresa on fkempresa = idempresa;
