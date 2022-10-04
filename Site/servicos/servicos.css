@@ -1,0 +1,69 @@
+/* engloba tudo */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    font-family: 'Roboto', sans-serif;
+    background-color: #000e3e;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.servicos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    min-height: 100vh;
+}
+/* engloba tudo */
+
+/* titulo */
+.titulo_servico p {
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+    padding: 50px 0;
+}
+
+.titulo_servico b {
+    color: #FFFA86;
+}
+
+/* pritmeiras imagens */
+
+.funcionalidades {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+}
+.caixa{
+    background-color: #AAD8D8;
+    padding: 0px 0px;
+    width: 130%;
+    align-items: center;
+    border-radius: 0 100px 100px 0;
+    justify-content: center;
+    overflow: hidden;
+    display: flex;
+    margin: 10px;
+}
+
+
+.funcionalidades p{
+    justify-content: center;
+    color: #ffff;
+    font-size: 20px;
+}
+
+.produtos{
+    height: 50%;
+display: contents;
+flex-direction: column-reverse;
+}

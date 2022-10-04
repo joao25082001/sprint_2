@@ -7,6 +7,7 @@
     font-family: 'Roboto', sans-serif;
 }
 .form_box h2{
+    font-size: 23px;
     padding-top: 25px;
 }
 
@@ -55,10 +56,6 @@ body {
     justify-content: space-evenly;
     align-items: center;
     border-radius: 0 20px 20px 0;
-}
-
-.form_box h2 {
-    font-size: 23px;
 }
 
 .form_box h4{
