@@ -12,7 +12,8 @@
 }
 
 body {
-    background-color: #000e3e;
+    background: rgb(0,1,17);
+    background: linear-gradient(0deg, rgba(0,1,17,1) 8%, rgba(1,13,60,1) 50%, rgba(0,1,17,1) 93%);
     display: flex;
     align-items: center;
     justify-content: center;
